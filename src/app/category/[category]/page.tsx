@@ -1,9 +1,9 @@
 interface CategoryPageProps {
-  params: Promise<{ category: string }> | { category: string };
+  params: Promise<{ category: string }>;
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { category } = await Promise.resolve(params);
+  const { category } = await params;
 
   return (
     <main className="mx-auto max-w-4xl p-6">

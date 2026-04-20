@@ -1,9 +1,9 @@
 interface CalculatorPageProps {
-  params: Promise<{ slug: string }> | { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function CalculatorPage({ params }: CalculatorPageProps) {
-  const { slug } = await Promise.resolve(params);
+  const { slug } = await params;
 
   return (
     <main className="mx-auto max-w-4xl p-6">
