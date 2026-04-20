@@ -1,11 +1,11 @@
 # Kalculate.me
 
-Kalculate.me is an SEO-first calculator platform built with **Next.js 15**, **React**, and **TypeScript**.
+Kalculate.me is an SEO-first calculator platform built with **Next.js (App Router)**, **React**, and **TypeScript**.
 This repository is scaffolded for rapid implementation of calculator features, category pages, state management, and production deployment.
 
 ## Tech Stack
 
-- Next.js 15 (App Router)
+- Next.js (App Router)
 - React 18
 - TypeScript 5
 - Tailwind CSS 3
