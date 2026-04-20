@@ -5,6 +5,12 @@ export interface SeoMeta {
 }
 
 export function buildCanonicalUrl(path: string): string {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://kalculate.me";
-  return `${siteUrl.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://kalculate.me").replace(/\/$/, "");
+  const normalizedPath = path.trim();
+
+  if (!normalizedPath || normalizedPath === "/") {
+    return siteUrl;
+  }
+
+  return `${siteUrl}/${normalizedPath.replace(/^\//, "")}`;
 }

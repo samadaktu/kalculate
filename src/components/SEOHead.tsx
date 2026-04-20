@@ -5,9 +5,9 @@ interface SEOHeadProps {
 
 export default function SEOHead({ title, description }: SEOHeadProps) {
   return (
-    <>
-      <h2 className="sr-only">{title}</h2>
-      <p className="sr-only">{description}</p>
-    </>
+    <section aria-label="SEO metadata placeholder">
+      <p>{title}</p>
+      <p>{description}</p>
+    </section>
   );
 }
